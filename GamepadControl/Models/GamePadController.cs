@@ -35,8 +35,8 @@ namespace GamepadControl.Models
                     {
                         GamePadState gamePadState;
                         xInput.XInputGetState(out gamePadState);
-            //            state.Gamepad.sThumbLX, state.Gamepad.sThumbLY,
-            //state.Gamepad.sThumbRX, state.Gamepad.sThumbRY,
+                        //            state.Gamepad.sThumbLX, state.Gamepad.sThumbLY,
+                        //state.Gamepad.sThumbRX, state.Gamepad.sThumbRY,
                         Console.WriteLine("LeftTrigger: {0} RightTrigger:{1} LeftThumb: {2},{3} RightThumb: {4},{5} Button:{6}\r\n",
             gamePadState.Gamepad.bLeftTrigger, gamePadState.Gamepad.bRightTrigger,
             gamePadState.Gamepad.sThumbLX, gamePadState.Gamepad.sThumbLY,
@@ -49,6 +49,14 @@ namespace GamepadControl.Models
                 }
 
             }, cancellationTokenSource.Token);
+        }
+        public void Stop()
+        {
+            if (cancellationTokenSource != null)
+            {
+                cancellationTokenSource.Cancel();
+                Thread.Sleep(20);
+            }
         }
     }
 }

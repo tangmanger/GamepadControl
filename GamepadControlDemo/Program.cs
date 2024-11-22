@@ -14,6 +14,12 @@ namespace GamepadControlDemo
         {
             GamePadController gamePadController = new GamePadController();
             gamePadController.Start();
+            Task.Run(async () =>
+            {
+
+                await Task.Delay(10000);
+                gamePadController.Stop();
+            });
             Console.ReadKey();
         }
     }
