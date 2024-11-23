@@ -18,7 +18,12 @@ namespace GamepadControlDemo
             {
 
                 await Task.Delay(10000);
+                Console.WriteLine("--------------------->stop");
                 gamePadController.Stop();
+
+                await Task.Delay(10000);
+                Console.WriteLine("--------------------->start");
+                gamePadController.Start();
             });
             Console.ReadKey();
         }

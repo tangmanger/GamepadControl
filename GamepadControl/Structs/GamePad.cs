@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace GamepadControl.Structs
 {
-    [StructLayout(LayoutKind.Sequential,Pack =2,Size =12)]
     public struct GamePad
     {
         public uint wButtons;
