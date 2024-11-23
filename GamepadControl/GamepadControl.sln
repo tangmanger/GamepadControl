@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamepadControl", "GamepadCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamepadControlDemo", "..\GamepadControlDemo\GamepadControlDemo.csproj", "{9631CF54-09A1-4063-A0E8-86696E983BC0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gamepad", "..\Gamepad\Gamepad.vcxproj", "{6B24FEE6-EEC5-4749-B60B-245D926816C5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +31,8 @@ Global
 		{AC9EA184-5153-4BCD-8F12-4D82CF72B280}.Release|x86.Build.0 = Release|Any CPU
 		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Debug|x64.Build.0 = Debug|Any CPU
+		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Debug|x64.ActiveCfg = Debug|x64
+		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Debug|x64.Build.0 = Debug|x64
 		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Debug|x86.Build.0 = Debug|Any CPU
 		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,18 +41,6 @@ Global
 		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Release|x64.Build.0 = Release|Any CPU
 		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Release|x86.ActiveCfg = Release|Any CPU
 		{9631CF54-09A1-4063-A0E8-86696E983BC0}.Release|x86.Build.0 = Release|Any CPU
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Debug|Any CPU.Build.0 = Debug|x64
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Debug|x64.ActiveCfg = Debug|x64
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Debug|x64.Build.0 = Debug|x64
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Debug|x86.ActiveCfg = Debug|Win32
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Debug|x86.Build.0 = Debug|Win32
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Release|Any CPU.ActiveCfg = Release|x64
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Release|Any CPU.Build.0 = Release|x64
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Release|x64.ActiveCfg = Release|x64
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Release|x64.Build.0 = Release|x64
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Release|x86.ActiveCfg = Release|Win32
-		{6B24FEE6-EEC5-4749-B60B-245D926816C5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
