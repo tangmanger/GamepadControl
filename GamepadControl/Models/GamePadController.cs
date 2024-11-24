@@ -13,6 +13,7 @@ namespace GamepadControl.Models
 {
     public class GamePadController
     {
+        public event Action<GamePadChangedArgs> GameButtonStateChanged;
         IXInput xInput;
         Task _controllerTask;
         CancellationTokenSource cancellationTokenSource;
@@ -42,6 +43,15 @@ namespace GamepadControl.Models
             gamePadState.Gamepad.sThumbLX, gamePadState.Gamepad.sThumbLY,
             gamePadState.Gamepad.sThumbRX, gamePadState.Gamepad.sThumbRY,
             gamePadState.Gamepad.wButtons);
+                        GamePadChangedArgs gamePadChangedArgs = new GamePadChangedArgs();
+                        gamePadChangedArgs.ThumbRY = gamePadState.Gamepad.sThumbRY;
+                        gamePadChangedArgs.ThumbRX = gamePadState.Gamepad.sThumbRX;
+                        gamePadChangedArgs.ThumbLY = gamePadState.Gamepad.sThumbLY;
+                        gamePadChangedArgs.ThumbLX = gamePadState.Gamepad.sThumbLX;
+                        gamePadChangedArgs.LeftTrigger = gamePadState.Gamepad.bLeftTrigger;
+                        gamePadChangedArgs.RightTrigger = gamePadState.Gamepad.bRightTrigger;
+                        gamePadChangedArgs.Button = (GamePadButton)gamePadState.Gamepad.wButtons;
+                        GameButtonStateChanged?.Invoke(gamePadChangedArgs);
                     }
 
 

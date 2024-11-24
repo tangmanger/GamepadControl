@@ -42,19 +42,37 @@ namespace GamepadControlDemo
             //    });
             //    Console.ReadKey();
             GamePadController gamePadController = new GamePadController();
+            gamePadController.GameButtonStateChanged += GamePadController_GameButtonStateChanged;
             gamePadController.Start();
-            Task.Run(async () =>
-            {
+            //Task.Run(async () =>
+            //{
 
-                await Task.Delay(10000);
-                Console.WriteLine("--------------------->stop");
-                gamePadController.Stop();
+            //    await Task.Delay(10000);
+            //    Console.WriteLine("--------------------->stop");
+            //    gamePadController.Stop();
 
-                await Task.Delay(10000);
-                Console.WriteLine("--------------------->start");
-                gamePadController.Start();
-            });
+            //    //await Task.Delay(10000);
+            //    //Console.WriteLine("--------------------->start");
+            //    //gamePadController.Start();
+            //});
             Console.ReadKey();
+        }
+
+        private static void GamePadController_GameButtonStateChanged(GamePadChangedArgs obj)
+        {
+            var button = obj.Button;
+            if (button.HasFlag(GamepadControl.Enums.GamePadButton.Down))
+            {
+                Console.WriteLine("下 按下");
+            }
+            if (button.HasFlag(GamepadControl.Enums.GamePadButton.Up))
+            {
+                Console.WriteLine("上 按下");
+            }
+            if (button.HasFlag(GamepadControl.Enums.GamePadButton.A))
+            {
+                Console.WriteLine("A 按下");
+            }
         }
     }
 }

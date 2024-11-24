@@ -52,9 +52,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\GamePadButton.cs" />
     <Compile Include="Enums\UserIndex.cs" />
     <Compile Include="Interfaces\IXInput.cs" />
     <Compile Include="Models\BaseXInputModel.cs" />
+    <Compile Include="Models\GamePadChangedArgs.cs" />
     <Compile Include="Models\GamePadController.cs" />
     <Compile Include="Models\Inputs\XInput13.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
