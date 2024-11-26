@@ -73,6 +73,8 @@ namespace GamepadControlDemo
             {
                 Console.WriteLine("A 按下");
             }
+            Console.WriteLine(obj.LeftDirection.ToString());
+            Console.WriteLine(obj.RightDirection.ToString());
         }
     }
 }

@@ -14,13 +14,15 @@ namespace GamepadControl.Enums
         Down = 2,
         Left = 4,
         Right = 8,
-        LeftShoulder= 256,
-        RightShoulder= 512,
+        LB = 256,
+        RB = 512,
         Guide = 1024,
         A = 4096,
         B = 8192,
         Y = 32768,
-        X = 16384
+        X = 16384,
+      
+        
     }
 
 }
