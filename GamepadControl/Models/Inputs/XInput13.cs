@@ -45,7 +45,12 @@ namespace GamepadControl.Models.Inputs
             return getStateEx(UserIndex, out gamePadState);
         }
 
+        public override int XInputGetState(UserIndex userIndex, out GamePadState gamePadState)
+        {
+            return getStateEx(userIndex, out gamePadState);
+        }
 
+    
         //[DllImport("xinput1_3.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "XInputEnable")]
         //public static extern void XInputEnable(RawBool arg0);
 

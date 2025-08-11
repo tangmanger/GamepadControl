@@ -62,5 +62,6 @@ namespace GamepadControl.Models
             }
         }
         public GamePadButton Button { get; set; }
+        public UserIndex UserIndex { get; set; }
     }
 }

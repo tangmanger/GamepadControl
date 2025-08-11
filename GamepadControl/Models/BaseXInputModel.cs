@@ -53,6 +53,7 @@ namespace GamepadControl.Models
             return false;
         }
         public abstract int XInputGetState(out GamePadState gamePadState);
+        public abstract int XInputGetState(UserIndex userIndex, out GamePadState gamePadState);
         public bool IsConnected
         {
             get

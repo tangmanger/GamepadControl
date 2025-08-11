@@ -19,6 +19,7 @@ namespace GamepadControl.Interfaces
         /// <param name="gamePadState"></param>
         /// <returns></returns>
         int XInputGetState( out GamePadState gamePadState);
+        int XInputGetState(UserIndex userIndex, out GamePadState gamePadState);
         /// <summary>
         /// 加载
         /// </summary>
