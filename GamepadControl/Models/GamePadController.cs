@@ -32,6 +32,7 @@ namespace GamepadControl.Models
                 return xInput.IsConnected;
             }
         }
+        public List<UserIndex> Users { get; set; } = new List<UserIndex>() { UserIndex.One, UserIndex.Two, UserIndex.Three, UserIndex.Four };
         Dictionary<UserIndex, uint> UserIndexDic = new Dictionary<UserIndex, uint>();
         public void Start()
         {
@@ -42,8 +43,7 @@ namespace GamepadControl.Models
                 {
                     if (xInput.IsConnected)
                     {
-                        List<UserIndex> userIndices = new List<UserIndex>() { UserIndex.One, UserIndex.Two, UserIndex.Three, UserIndex.Four };
-                        foreach (var userInfo in userIndices)
+                        foreach (var userInfo in Users)
                         {
                             GamePadState gamePadState;
                             xInput.XInputGetState(userInfo, out gamePadState);
@@ -75,6 +75,10 @@ namespace GamepadControl.Models
                             gamePadChangedArgs.Button = (GamePadButton)gamePadState.Gamepad.wButtons;
                             GameButtonStateChanged?.Invoke(gamePadChangedArgs);
                         }
+                    }
+                    else
+                    {
+                        xInput = new XInput13(UserIndex.One);
                     }
 
                     Thread.Sleep(20);
