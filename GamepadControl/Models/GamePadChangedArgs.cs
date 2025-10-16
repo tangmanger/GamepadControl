@@ -63,5 +63,12 @@ namespace GamepadControl.Models
         }
         public GamePadButton Button { get; set; }
         public UserIndex UserIndex { get; set; }
+        public int dwPacketNumber { get; set; }
+
+        public override string ToString()
+        {
+            string str = $"UserIndex:{UserIndex.ToString()}\tLeftTrigger:{LeftTrigger}\tRightTrigger:{RightTrigger}\tThumbLX:{ThumbLX}\tThumbLY:{ThumbLY}\tThumbRX:{ThumbRX}\tThumbRY:{ThumbRY}\tLeftDirection:{LeftDirection.ToString()}\tRightDirection:{RightDirection}\tButton:{Button}\tdwPacketNumber:{dwPacketNumber}";
+            return str;
+        }
     }
 }

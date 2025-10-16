@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace GamepadControl.Structs
 {
-    [StructLayout(LayoutKind.Sequential,Size =16)]
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     public struct GamePadState
     {
-        [MarshalAs(UnmanagedType.U4)]
-        public uint dwPacketNumber;
+        public int dwPacketNumber;
         
         public GamePad Gamepad;
     }
