@@ -70,6 +70,7 @@ namespace GamepadControl.Models
                         //gamePadState.Gamepad.wButtons);
                         GamePadChangedArgs gamePadChangedArgs = new GamePadChangedArgs();
                         gamePadChangedArgs.UserIndex = userInfo;
+
                         gamePadChangedArgs.ThumbRY = gamePadState.Gamepad.sThumbRY;
                         gamePadChangedArgs.ThumbRX = gamePadState.Gamepad.sThumbRX;
                         gamePadChangedArgs.ThumbLY = gamePadState.Gamepad.sThumbLY;
@@ -77,7 +78,7 @@ namespace GamepadControl.Models
                         gamePadChangedArgs.LeftTrigger = gamePadState.Gamepad.bLeftTrigger;
                         gamePadChangedArgs.RightTrigger = gamePadState.Gamepad.bRightTrigger;
                         gamePadChangedArgs.Button = (GamePadButton)gamePadState.Gamepad.wButtons;
-                        gamePadChangedArgs.dwPacketNumber =(int) gamePadState.dwPacketNumber;
+                        gamePadChangedArgs.dwPacketNumber = (int)gamePadState.dwPacketNumber;
                         GameButtonStateChanged?.Invoke(gamePadChangedArgs);
                     }
                     //}

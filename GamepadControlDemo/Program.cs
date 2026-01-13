@@ -1,4 +1,5 @@
-﻿using GamepadControl.Models;
+﻿using GamepadControl.Enums;
+using GamepadControl.Models;
 using GamepadControl.Structs;
 using System;
 using System.Collections.Generic;
@@ -73,8 +74,12 @@ namespace GamepadControlDemo
             {
                 Console.WriteLine("A 按下");
             }
-            Console.WriteLine(obj.LeftDirection.ToString());
-            Console.WriteLine(obj.RightDirection.ToString());
+            if (button.HasFlag(GamePadButton.Back) && button.HasFlag(GamePadButton.Y))
+            {
+                //Console.WriteLine(obj.LeftDirection.ToString());
+                //Console.WriteLine(obj.RightDirection.ToString());
+                Console.WriteLine("================>" + button.ToString());
+            }
         }
     }
 }
